@@ -4,98 +4,323 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="css/index.css" />
-    <title>Github</title>
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/index.css" />
   </head>
   <body>
     <header>
-      <nav class='desktop-navbar'>
-        <div class='mobile-nav-btn'>
-          <button id='mobile-menu-btn'>
-            <span></span>
-            <span></span>
-            <span></span>
-          </button>
-        </div>
-        <div class='navbar-left-side'>
-          <ul>
-            <li>
-              <svg class="octicon octicon-mark-github v-align-middle" height="32" viewBox="0 0 16 16" version="1.1" width="32" aria-hidden="true">
-              <path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"></path></svg>
-            </li>
-            <li>
-              <label class='search-bar' for='search' id='search-label'>
-                <input type='text' id='search' name='search' placeholder='Search or jump to...' />
-                <button>/</button>
+      <nav class="nav">
+        <ul class="nav-list">
+          <li class="nav-item">
+            <button class="mobile-nav-btn" id="mobile-nav-toggle">
+              <span class="bars"></span>
+              <span class="bars"></span>
+              <span class="bars"></span>
+            </button>
+          </li>
+          <li class="nav-item" id="desktop-view-nav-list">
+            <div>
+              <a href='#'>
+                <img src="./images/github.svg" alt="logo" />
+              </a>
+            </div>
+            <div id="nav-desktop-search">
+              <label for="search">
+                <input type="text" placeholder='search or jump to...' id="search"/>  
+                <button>
+                  /
+                </button>
               </label>
-            </li>
-            <li>Pull request</li>
-            <li>Issues</li>
-            <li>Marketplace</li>
-            <li>Explore</li>
-          </ul>
-        </div>
-        <div class='navbar-right-side'>
-          <ul>
-            <li>
-              <img src='./images/bell.svg' alt='bell'/>
-            </li>
-            <li>p</li>
-            <li>p</li>
-          </ul>
-        </div>
-      </nav>
-      <nav class='mobile-navbar' id='mobile-menu'>
-        <div class='mobile-nav-btn'>
-          <button id='mobile-menu-btn'>
+            </div>
+            <div id="nav-desktop-list">
+              <ul>
+                <li>
+                  <a href="#">
+                    Pull requests
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    Issues
+                  </a>
+                </li>
+                <li> 
+                <a href="#">
+                  Codespaces
+                </a>
+                </li>
+                <li>
+                  <a href="#">
+                    Marketplace
+                  </a>                  
+                </li>
+                <li>
+                  <a href="#">
+                    Explore
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="nav-item" id='nav-right-list'>
+            <ul>
+              <li>
+                <a href="#">
+                  <img src="./images/bell.svg" alt="notification" id="notification"/>
+                </a>
+              </li>
+              <li class='dropdown'>
+                  <a href="javascript:void(0)" class='dropdown-toggle'>
+                    <img src="./images/plus.svg" alt="avatar">
+                    <img src="./images/caret-down-nav.svg" alt="avatar" id='dropdown-toggle-caret'>
+                  </a>
+                  <div class='dropdown-content'>
+                      <span class='triangle'></span>
+                      <ul>
+                        <li>
+                          New repository
+                        </li>
+                        <li>
+                          Import repository
+                        </li>
+                        <li>
+                          New gist
+                        </li>
+                        <li>
+                          New organization
+                        </li>
+                        <li>
+                          New project
+                        </li>
+                      </ul>
+                  </div>
+              </li>
+              <li class='dropdown'>
+                <a href="" class='dropdown-toggle'>
+                  <img src="./images/IMG-20210112-WA0004.jpg" alt="avatar" id="user-avatar">
+                  <img src="./images/caret-down-nav.svg" alt="avatar" id='dropdown-toggle-caret'>
+                </a>
+                <div class='dropdown-content'>
+                  <span class='triangle'></span>
+                  <ul>
+                    <li>
+                      <div>
+                        <span>Signed in as</span>
+                        <span>Charles Ekube</span>
+                      </div>
+                    </li>
+                    <hr/>
+                    <li>
+                      <div class="update-status-dropdown">
+                        <img src="./images/smile.svg" alt="avatar" />
+                        <span id="smiley">Set status</span>
+                      </div>
+                    </li>
+                    <hr/>
+                    <li>
+                      Your profile
+                    </li>
+                    <li>
+                      Your repositories
+                    </li>
+                    <li>
+                      Your codespaces
+                    </li>
+                    <li>
+                      Your projects
+                    </li>
+                    <li>
+                      Your stars
+                    </li>
+                    <li>
+                      Your gists
+                    </li>
+                    <hr/>
+                    <li>
+                      Upgrade
+                    </li>
+                    <li>
+                      Feature preview
+                    </li>
+                    <li>
+                      Help
+                    </li>
+                    <li>
+                      Settings
+                    </li>
+                    <hr/>
+                    <li>
+                      Sign out
+                    </li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+          </li>
+        </ul>
+        <ul class="mobile-nav-list-dropdown" id="mobile-nav-dropdown">
+          <li class="mobile-nav-list-dropdown-item">
+            <input type="text" />
+          </li>
+          <li class="mobile-nav-list-dropdown-item">Dashboard</li>
+          <li class="mobile-nav-list-dropdown-item">Pull requests</li>
+          <li class="mobile-nav-list-dropdown-item">Issues</li>
+          <li class="mobile-nav-list-dropdown-item">Marketplace</li>
+          <li class="mobile-nav-list-dropdown-item">Explore</li>
+          <li class="mobile-nav-list-dropdown-item">Codespaces</li>
+          <li class="mobile-nav-list-dropdown-item">Sponsors</li>
+          <li class="mobile-nav-list-dropdown-item">Settings</li>
+          <li class="mobile-nav-list-dropdown-item">
+            <img src="" alt="avatar" />
+            <span>Name</span>
+          </li>
+          <li class="mobile-nav-list-dropdown-item">
             <span></span>
-            <span></span>
-            <span></span>
-          </button>
-        </div>
-        <div class='navbar-left-side'>
-          <ul>
-            <li>
-              <svg class="octicon octicon-mark-github v-align-middle" height="32" viewBox="0 0 16 16" version="1.1" width="32" aria-hidden="true">
-              <path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"></path></svg>
-            </li>
-            <li>
-              <label class='search-bar' for='search' id='search-label'>
-                <input type='text' id='search' name='search' placeholder='Search or jump to...' />
-                <button>/</button>
-              </label>
-            </li>
-            <li>Pull request</li>
-            <li>Issues</li>
-            <li>Marketplace</li>
-            <li>Explore</li>
-          </ul>
-        </div>
-        <div class='navbar-right-side'>
-          <ul>
-            <li>
-              <img src='./images/bell.svg' alt='bell'/>
-            </li>
-            <li>p</li>
-            <li>p</li>
-          </ul>
-        </div>
+            Sign out
+          </li>
+        </ul>
       </nav>
     </header>
-    <main>
-        <section class='tabs'>
-            <ul>
-                <li>Overview</li>
-                <li>Repositories</li>
-                <li>Projects</li>
-                <li>Packages</li>
-            </ul>
-        </section>
-        <section>
-            <aside></aside>
-            
-        </section>
+    <main class="container">
+      <!-- Bio section -->
+      <section class="bio-section">
+        <div class="bio-section-content">
+          <div class="profile-avatar">
+            <img src="./images/IMG-20210112-WA0004.jpg" alt="avatar" />
+          </div>
+          <ul class="profile-name-list">
+            <li>Name</li>
+            <li>NickName</li>
+          </ul>
+        </div>
+        <div class="profile-details-container">
+          <div class="edit-profile-container">
+            <div class="update-status">
+              <img src="./images/smile.svg" alt="avatar" />
+              <span id="smiley">Set status</span>
+            </div>
+            <div class="edit-profile-btn">
+              <button>Edit profile</button>
+            </div>
+          </div>
+          <ul class="profile-followers-list">
+            <li>followers</li>
+            <li>following</li>
+            <li>star</li>
+          </ul>
+        </div>
+      </section>
+      <!-- End of bio section -->
+
+      <!-- sticky tab-nav -->
+      <section>
+        <div class="tabs">
+          <ul class="tabs-list">
+            <li
+              class="tabs-list-item" 
+              onclick="toggleTabs(event, 'overview')"
+              >
+              <img src="./images/book.svg" alt="">
+              <span>
+                Overview
+              </span>
+            </li>
+            <li
+              class="tabs-list-item"
+              id="active-tab"
+              onclick="toggleTabs(event, 'repositories')"
+            >
+            <img src="./images/newrepo.svg" alt="">
+            <span>
+              Repositories
+            </span>
+            </li>
+            <li 
+              class="tabs-list-item" 
+              onclick="toggleTabs(event, 'projects')"
+            >
+            <img src="./images/project.svg" alt="">
+             <span>
+              Projects
+             </span>
+            </li>
+            <li 
+              class="tabs-list-item" 
+              onclick="toggleTabs(event, 'packages')"
+              >
+              <img src="./images/pack.svg" alt="">
+              <span>
+                Packages
+              </span>
+            </li>
+          </ul>
+        </div>
+        <div class="tabs-content-container">
+          <div class="tabs-content-item" id="overview">first</div>
+          <div class="tabs-content-item" id="repositories">
+            <div class="repositories-filter-container">
+              <div class="new-repository">
+                <a>
+                  <img src="./images/repo.svg" alt="new-repo" />
+                  <span>New</span>
+                </a>
+              </div>
+              <div class="repository-filter-search">
+                <input type="text" placeholder="Find a repository..." />
+                <ul>
+                  <li>
+                    <button>
+                      Type
+                      <span>
+                        <img src="./images/caret-down.svg" alt="caret-down" />
+                      </span>
+                    </button>
+                  </li>
+                  <li>
+                    <button>
+                      Language
+                      <span>
+                        <img src="./images/caret-down.svg" alt="caret-down" />
+                      </span>
+                    </button>
+                  </li>
+                  <li>
+                    <button>
+                      Sort
+                      <span>
+                        <img src="./images/caret-down.svg" alt="caret-down" />
+                      </span>
+                    </button>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="repositories-list-container">
+              <ul>
+                <li class="repository-card">
+                  <div class="repository-card-content">
+                    <h4>Repo Name</h4>
+                    <p>Description</p>
+                    <ul>
+                      <li>HTML</li>
+                      <li>Updated yesterday</li>
+                    </ul>
+                  </div>
+                  <aside>
+                    <button>
+                      <img src="./images/star.svg" alt="" />
+                      <span>Star</span>
+                    </button>
+                  </aside>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="tabs-content-item" id="projects">third</div>
+          <div class="tabs-content-item" id="packages">fourth</div>
+        </div>
+      </section>
     </main>
-    <script src="js/index.js"></script>
+    <script src="./js/index.js"></script>
   </body>
 </html>

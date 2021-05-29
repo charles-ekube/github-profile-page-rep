@@ -1,13 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="./css/index.css" />
-  </head>
-  <body>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/svg+xml" href="https://github.githubassets.com/favicons/favicon.svg">
+  <meta name="description" content="Github Repositories Replica for BuyCoins Frontend Application">
+  <title>Github Repo</title>
+  <link rel="stylesheet" href="./css/index.css" />
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <!-- Login section  -->
+  <section class="login-page-container">
+    <div class='login-page-content'>
+      <div class="header" role='banner'>
+        <a class="header-logo" href="#" aria-label="Homepage">
+          <svg aria-hidden="true" viewBox="0 0 16 16" version="1.1" data-view-component="true" height="48" width="48"
+            class="octicon octicon-mark-github">
+            <path fill-rule="evenodd"
+              d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z">
+            </path>
+          </svg>
+        </a>
+      </div>
+      <div class="login-form-container">
+        <div class="login-form-title">
+          <h1>Sign In</h1>
+        </div>
+        <div class="login-form-content">
+          <form accept-charset="UTF-8" method="post" id="login-user">
+            <label for="login-input">
+              Username
+            </label>
+            <input type="text" name="login" id="login-input" value="" placeholder="Enter username" class="login-input"
+              autocorrect="off" required />
+            <div class="submit-container">
+              <input type="submit" name="commit" value="Login" class="submit-btn">
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- end login section  -->
+
+
+  <!-- main profile  -->
+  <section class='profile-details' style="display: none;">
+    <!-- Navigation -->
     <header>
       <nav class="nav">
         <ul class="nav-list">
@@ -26,7 +72,7 @@
             </div>
             <div id="nav-desktop-search">
               <label for="search">
-                <input type="text" placeholder='search or jump to...' id="search"/>  
+                <input type="text" placeholder='search or jump to...' id="search" />
                 <button>
                   /
                 </button>
@@ -44,15 +90,15 @@
                     Issues
                   </a>
                 </li>
-                <li> 
-                <a href="#">
-                  Codespaces
-                </a>
+                <li>
+                  <a href="#">
+                    Codespaces
+                  </a>
                 </li>
                 <li>
                   <a href="#">
                     Marketplace
-                  </a>                  
+                  </a>
                 </li>
                 <li>
                   <a href="#">
@@ -66,38 +112,28 @@
             <ul>
               <li>
                 <a href="#">
-                  <img src="./images/bell.svg" alt="notification" id="notification"/>
+                  <img src="./images/bell.svg" alt="notification" id="notification" />
                 </a>
               </li>
               <li class='dropdown'>
-                  <a href="javascript:void(0)" class='dropdown-toggle'>
-                    <img src="./images/plus.svg" alt="avatar">
-                    <img src="./images/caret-down-nav.svg" alt="avatar" id='dropdown-toggle-caret'>
-                  </a>
-                  <div class='dropdown-content'>
-                      <span class='triangle'></span>
-                      <ul>
-                        <li>
-                          New repository
-                        </li>
-                        <li>
-                          Import repository
-                        </li>
-                        <li>
-                          New gist
-                        </li>
-                        <li>
-                          New organization
-                        </li>
-                        <li>
-                          New project
-                        </li>
-                      </ul>
-                  </div>
+                <a href="javascript:void(0)" class='dropdown-toggle'>
+                  <img src="./images/plus.svg" alt="avatar">
+                  <img src="./images/caret-down-nav.svg" alt="avatar" id='dropdown-toggle-caret'>
+                </a>
+                <div class='dropdown-content'>
+                  <span class='triangle'></span>
+                  <ul>
+                    <li>New repository</li>
+                    <li>Import repository</li>
+                    <li>New gist</li>
+                    <li>New organization</li>
+                    <li>New project</li>
+                  </ul>
+                </div>
               </li>
               <li class='dropdown'>
                 <a href="" class='dropdown-toggle'>
-                  <img src="./images/IMG-20210112-WA0004.jpg" alt="avatar" id="user-avatar">
+                  <img src="" alt="avatar" id="user-avatar">
                   <img src="./images/caret-down-nav.svg" alt="avatar" id='dropdown-toggle-caret'>
                 </a>
                 <div class='dropdown-content'>
@@ -106,52 +142,30 @@
                     <li>
                       <div>
                         <span>Signed in as</span>
-                        <span>Charles Ekube</span>
+                        <span id='nav-username'></span>
                       </div>
                     </li>
-                    <hr/>
+                    <hr />
                     <li>
                       <div class="update-status-dropdown">
                         <img src="./images/smile.svg" alt="avatar" />
                         <span id="smiley">Set status</span>
                       </div>
                     </li>
-                    <hr/>
-                    <li>
-                      Your profile
-                    </li>
-                    <li>
-                      Your repositories
-                    </li>
-                    <li>
-                      Your codespaces
-                    </li>
-                    <li>
-                      Your projects
-                    </li>
-                    <li>
-                      Your stars
-                    </li>
-                    <li>
-                      Your gists
-                    </li>
-                    <hr/>
-                    <li>
-                      Upgrade
-                    </li>
-                    <li>
-                      Feature preview
-                    </li>
-                    <li>
-                      Help
-                    </li>
-                    <li>
-                      Settings
-                    </li>
-                    <hr/>
-                    <li>
-                      Sign out
-                    </li>
+                    <hr />
+                    <li>Your profile</li>
+                    <li>Your repositories</li>
+                    <li>Your codespaces</li>
+                    <li>Your projects</li>
+                    <li>Your stars </li>
+                    <li>Your gists</li>
+                    <hr />
+                    <li>Upgrade</li>
+                    <li>Feature preview</li>
+                    <li>Help</li>
+                    <li>Settings</li>
+                    <hr />
+                    <li>Sign out</li>
                   </ul>
                 </div>
               </li>
@@ -162,53 +176,69 @@
           <li class="mobile-nav-list-dropdown-item">
             <input type="text" />
           </li>
-          <li class="mobile-nav-list-dropdown-item">Dashboard</li>
-          <li class="mobile-nav-list-dropdown-item">Pull requests</li>
-          <li class="mobile-nav-list-dropdown-item">Issues</li>
-          <li class="mobile-nav-list-dropdown-item">Marketplace</li>
-          <li class="mobile-nav-list-dropdown-item">Explore</li>
-          <li class="mobile-nav-list-dropdown-item">Codespaces</li>
-          <li class="mobile-nav-list-dropdown-item">Sponsors</li>
-          <li class="mobile-nav-list-dropdown-item">Settings</li>
           <li class="mobile-nav-list-dropdown-item">
-            <img src="" alt="avatar" />
-            <span>Name</span>
+            <a href="#">
+              Dashboard
+            </a>
           </li>
           <li class="mobile-nav-list-dropdown-item">
-            <span></span>
-            Sign out
+            <a href="#">
+              Pull requests
+            </a>
+          </li>
+          <li class="mobile-nav-list-dropdown-item">
+            <a href="#">
+              Issues
+            </a>
+          </li>
+          <li class="mobile-nav-list-dropdown-item">
+            <a href="#">
+              Marketplace
+            </a>
+          </li>
+          <li class="mobile-nav-list-dropdown-item">
+            <a href="#">
+              Explore
+            </a>
+          </li>
+          <li class="mobile-nav-list-dropdown-item">
+            <a href="#">
+              Codespaces
+            </a>
+          </li>
+          <li class="mobile-nav-list-dropdown-item">
+            <a href="#">
+              Sponsors
+            </a>
+          </li>
+          <li class="mobile-nav-list-dropdown-item">
+            <a href="#">
+              Settings
+            </a>
+          </li>
+          <li class="mobile-nav-list-dropdown-item">
+            <a href="#">
+              <img src="" alt="avatar" id='mobile-nav-user-avatar' />
+              <span id='mobile-nav-username'></span>
+            </a>
+          </li>
+          <li class="mobile-nav-list-dropdown-item">
+            <a href="#">
+              <span></span>
+              Sign out
+            </a>
           </li>
         </ul>
       </nav>
     </header>
+
+    <!-- Navigation end  -->
+
+    <!-- content   -->
     <main class="container">
       <!-- Bio section -->
-      <section class="bio-section">
-        <div class="bio-section-content">
-          <div class="profile-avatar">
-            <img src="./images/IMG-20210112-WA0004.jpg" alt="avatar" />
-          </div>
-          <ul class="profile-name-list">
-            <li>Name</li>
-            <li>NickName</li>
-          </ul>
-        </div>
-        <div class="profile-details-container">
-          <div class="edit-profile-container">
-            <div class="update-status">
-              <img src="./images/smile.svg" alt="avatar" />
-              <span id="smiley">Set status</span>
-            </div>
-            <div class="edit-profile-btn">
-              <button>Edit profile</button>
-            </div>
-          </div>
-          <ul class="profile-followers-list">
-            <li>followers</li>
-            <li>following</li>
-            <li>star</li>
-          </ul>
-        </div>
+      <section class="bio-section" id='user-info'>
+
       </section>
       <!-- End of bio section -->
 
@@ -216,39 +246,27 @@
       <section>
         <div class="tabs">
           <ul class="tabs-list">
-            <li
-              class="tabs-list-item" 
-              onclick="toggleTabs(event, 'overview')"
-              >
-              <img src="./images/book.svg" alt="">
+            <li class="tabs-list-item" onclick="toggleTabs(event, 'overview')">
+              <img src="./images/book.svg" alt="avatar" id='tab-img'>
               <span>
                 Overview
               </span>
             </li>
-            <li
-              class="tabs-list-item"
-              id="active-tab"
-              onclick="toggleTabs(event, 'repositories')"
-            >
-            <img src="./images/newrepo.svg" alt="">
-            <span>
-              Repositories
-            </span>
+            <li class="tabs-list-item" id="active-tab" onclick="toggleTabs(event, 'repositories')">
+              <img src="./images/newrepo.svg" alt="avatar" id='tab-img'>
+              <span>
+                Repositories
+              </span>
+              <span id="total-repo"></span>
             </li>
-            <li 
-              class="tabs-list-item" 
-              onclick="toggleTabs(event, 'projects')"
-            >
-            <img src="./images/project.svg" alt="">
-             <span>
-              Projects
-             </span>
+            <li class="tabs-list-item" onclick="toggleTabs(event, 'projects')">
+              <img src="./images/project.svg" alt="avatar" id='tab-img'>
+              <span>
+                Projects
+              </span>
             </li>
-            <li 
-              class="tabs-list-item" 
-              onclick="toggleTabs(event, 'packages')"
-              >
-              <img src="./images/pack.svg" alt="">
+            <li class="tabs-list-item" onclick="toggleTabs(event, 'packages')">
+              <img src="./images/pack.svg" alt="avatar" id='tab-img'>
               <span>
                 Packages
               </span>
@@ -256,11 +274,11 @@
           </ul>
         </div>
         <div class="tabs-content-container">
-          <div class="tabs-content-item" id="overview">first</div>
+          <div class="tabs-content-item" id="overview">Overview</div>
           <div class="tabs-content-item" id="repositories">
             <div class="repositories-filter-container">
               <div class="new-repository">
-                <a>
+                <a href="#">
                   <img src="./images/repo.svg" alt="new-repo" />
                   <span>New</span>
                 </a>
@@ -296,31 +314,22 @@
               </div>
             </div>
             <div class="repositories-list-container">
-              <ul>
-                <li class="repository-card">
-                  <div class="repository-card-content">
-                    <h4>Repo Name</h4>
-                    <p>Description</p>
-                    <ul>
-                      <li>HTML</li>
-                      <li>Updated yesterday</li>
-                    </ul>
-                  </div>
-                  <aside>
-                    <button>
-                      <img src="./images/star.svg" alt="" />
-                      <span>Star</span>
-                    </button>
-                  </aside>
-                </li>
+              <ul id="repo-card-container">
               </ul>
             </div>
           </div>
-          <div class="tabs-content-item" id="projects">third</div>
-          <div class="tabs-content-item" id="packages">fourth</div>
+          <div class="tabs-content-item" id="projects">Projects</div>
+          <div class="tabs-content-item" id="packages">Packages</div>
         </div>
       </section>
     </main>
-    <script src="./js/index.js"></script>
-  </body>
+  </section>
+  <!-- end of stickynav -->
+  <!-- end of content  -->
+  <!-- end of profile   -->
+
+
+  <script src="./js/index.js"></script>
+</body>
+
 </html>

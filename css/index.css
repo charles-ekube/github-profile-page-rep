@@ -18,13 +18,62 @@ body {
   background: #fff;
   font-size: 1em;
   overflow-x: hidden;
+  font-family: "Roboto", sans-serif;
 }
 
 @media only screen and (min-device-width: 200px) and (max-device-width: 1000px) and (-webkit-min-device-pixel-ratio: 1) {
+  /* mobile login css  */
+
+  .login-page-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 100px;
+  }
+  .login-page-content {
+    /* padding: 50px 10px; */
+    width: 100%;
+    height: 100% !important;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .login-form-container .login-form-title {
+    text-align: center;
+    padding: 10px;
+  }
+  .login-form-content form {
+    display: flex;
+    flex-direction: column;
+  }
+  .login-form-content form label {
+    padding: 10px 0;
+    font-weight: 300;
+  }
+  .login-form-content form input[type="text"] {
+    padding: 10px 5px;
+    border-radius: 5px;
+    border: 0.5px solid #e1e4e8;
+  }
+  .submit-btn {
+    width: 100%;
+    text-align: center;
+    color: #f9f8f8;
+    background: #2fa550;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    margin: 20px 0;
+  }
+
+  /* end of mobile login css  */
+
+  /* mobile navigation css   */
   .nav {
-    padding: 10px 15px;
+    padding: 5px 15px;
     background: #24292f;
     color: #fff;
+    width: 100%;
   }
   .nav-list {
     display: flex;
@@ -35,6 +84,11 @@ body {
   #nav-desktop-list {
     display: none;
   }
+  #nav-right-list ul li:nth-child(2),
+  #nav-right-list ul li:nth-child(n + 3) {
+    display: none;
+  }
+
   .nav-item .mobile-nav-btn {
     background: inherit;
     display: flex;
@@ -52,8 +106,20 @@ body {
   .mobile-nav-list-dropdown {
     display: none;
   }
+  .mobile-nav-list-dropdown-item {
+    padding: 10px 5px;
+  }
+  .mobile-nav-list-dropdown-item a {
+    color: #e8eaec;
+  }
+  .mobile-nav-list-dropdown-item a img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+  }
+  /* end of mobile navigation css  */
 
-  /* boi-section */
+  /* boi-section css */
   .bio-section {
     padding: 15px;
   }
@@ -99,20 +165,32 @@ body {
     display: flex;
     justify-content: space-between;
     padding: 25px 0 0 0;
-    width: 60%;
+    width: 80%;
+    font-size: 14px;
+    color: #586069;
   }
-  /* end of bio section */
+
+  .location {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+  }
+  .location li {
+    margin: 10px 0;
+    font-size: 14px;
+    color: #586069;
+  }
+  /* end of bio section css */
+
+  /* tabs & repo section  css */
 
   .tabs {
     position: sticky;
     top: 0;
+    width: 100%;
     padding: 20px 0 0 0;
     z-index: 5;
     background: #fff;
-    -webkit-transition: height 0.3s;
-    -moz-transition: height 0.3s;
-    transition: height 0.3s;
-
     margin-bottom: 5px;
   }
   #repositories {
@@ -123,29 +201,46 @@ body {
   }
   .tabs .tabs-list {
     display: flex;
+    width: 100%;
+    margin: 0 0 0 0px;
     justify-content: space-between;
-    padding: 10px 10px 0 10px;
+    padding: 10px 10px 0px 10px;
     z-index: 5;
+    overflow-x: auto !important;
+    overflow-y: hidden;
     border-bottom: 1px solid #f0f2f9;
   }
   .tabs .tabs-list .tabs-list-item {
     border-bottom: 1px solid #f0f2f9;
+    font-size: 14px;
   }
-  .tabs .tabs-list .tabs-list-item:focus {
+  .tabs .tabs-list .tabs-list-item img {
+    display: none !important;
+  }
+  .tabs .tabs-list .tabs-list-item:active {
     border-bottom: 1px solid red;
   }
+
   .tabs-content-item {
     display: none;
   }
 
   .new-repository {
-    background: green;
     width: 100%;
     border-radius: 5px;
     display: flex;
     justify-content: center;
     padding: 5px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
+    background: #2c974b;
+  }
+  .new-repository a {
+    display: flex;
+    justify-content: space-between;
+    color: #fff;
+  }
+  .new-repository a img {
+    margin-right: 5px;
   }
   .repository-filter-search input[type="text"] {
     padding: 5px;
@@ -179,15 +274,17 @@ body {
     border-bottom: 0.5px solid #e1e4e8;
   }
   .repository-card-content h4 {
-    font-size: 25px;
+    font-size: 18px;
     padding: 7px 0;
     font-weight: bold;
     font-style: normal;
-    color: blue;
+    color: #0366d6;
+    width: 90%;
   }
   .repository-card-content p {
-    font-size: 16px;
+    font-size: 13px;
     padding: 0 0 7px 0;
+    color: #586069;
   }
   .repository-card-content ul {
     display: flex;
@@ -195,8 +292,9 @@ body {
     width: 100%;
   }
   .repository-card-content ul li {
-    font-size: 13px;
+    font-size: 12px;
     padding: 10px 0;
+    color: #586069;
   }
   .repository-card-content ul li:first-child {
     margin-right: 15px;
@@ -213,9 +311,56 @@ body {
   .repository-card aside button span {
     padding: 0 0 0 5px;
   }
+
+  /* end of tabs & repo section css  */
 }
 
 @media only screen and (min-device-width: 1001px) and (-webkit-min-device-pixel-ratio: 1) {
+  /* desktop login section css  */
+  .login-page-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 100px;
+  }
+  .login-page-content {
+    padding: 50px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .login-form-container .login-form-title {
+    text-align: center;
+    padding: 10px;
+  }
+  .login-form-content form {
+    display: flex;
+    flex-direction: column;
+  }
+  .login-form-content form label {
+    padding: 10px 0;
+    font-weight: 300;
+  }
+  .login-form-content form input[type="text"] {
+    padding: 10px 5px;
+    border-radius: 5px;
+    border: 0.5px solid #e1e4e8;
+  }
+  .submit-btn {
+    width: 100%;
+    text-align: center;
+    color: #f9f8f8;
+    background: #2fa550;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    margin: 20px 0;
+  }
+
+  /* end of desktop login section css */
+
+  /* desktop navigation css  */
   .nav {
     padding: 7px 15px;
     background: #24292f;
@@ -241,13 +386,13 @@ body {
     border-radius: 5px;
     padding: 5px;
   }
-  #nav-desktop-search input[type= text] {
-      background: inherit;
-      border: none;
-      padding: 5px;
+  #nav-desktop-search input[type="text"] {
+    background: inherit;
+    border: none;
+    padding: 5px;
   }
   #nav-desktop-search button {
-    background:inherit;
+    background: inherit;
     border: 0.5px solid #e1e4e8;
     border-radius: 5px;
     padding: 2px 5px;
@@ -265,60 +410,60 @@ body {
   }
   #desktop-view-nav-list ul li a {
     margin: 0 20px 0 0;
-    color:#fff;
+    color: #fff;
   }
   .mobile-nav-list-dropdown {
     display: none;
   }
-  #nav-right-list>ul {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
+  #nav-right-list > ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
   #notification {
     margin-top: 5px;
   }
-.dropdown {
+  .dropdown {
     position: relative;
     margin-left: 10px;
-}
-.dropdown-content {
+  }
+  .dropdown-content {
     display: none;
-    position:absolute;
+    position: absolute;
     background: #fff;
     border-radius: 5px;
     right: 15px;
     top: 35px;
-    color:#000;
-    box-shadow: 0 1px 2px rgba(0,0,0,0.25);
-}
-.dropdown-content ul {
+    color: #000;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
+  }
+  .dropdown-content ul {
     display: flex;
     flex-direction: column;
     width: 150px;
     text-align: left;
-}
-.dropdown-content ul li {
-    display:flex;
+  }
+  .dropdown-content ul li {
+    display: flex;
     padding: 5px 10px;
-}
-hr {
+  }
+  hr {
     border: 0.5px solid #e1e4e8;
-}
-.dropdown-toggle {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.dropdown-toggle #user-avatar {
-  border-radius: 50%;
-  width: 25px;
-  height: 25px;
-}
-#dropdown-toggle-caret {
-  margin-left:5px;
-}
-.triangle {
+  }
+  .dropdown-toggle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .dropdown-toggle #user-avatar {
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+  }
+  #dropdown-toggle-caret {
+    margin-left: 5px;
+  }
+  .triangle {
     width: 0;
     height: 0;
     border-left: 10px solid transparent;
@@ -328,18 +473,23 @@ hr {
     top: -25px;
     left: 125px;
     right: 0;
-}
-.dropdown:hover .dropdown-content {
-    display:block;
-}
+  }
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  /* end of desktop navigation css   */
+
+  /* container-grid  */
   .container {
     display: grid;
     grid-template-columns: 400px auto;
   }
-  /* boi-section */
+
+  /* boi-section css */
   .bio-section {
     padding: 40px 0 0 70px;
     position: relative;
+    /* z-index:4; */
   }
   .bio-section-content {
     display: flex;
@@ -348,6 +498,14 @@ hr {
   .bio-section-content .profile-avatar {
     margin-right: 10px;
   }
+  .profile-name-list li:nth-child(1) {
+    color: #24292e;
+  }
+  .profile-name-list li:nth-child(2) {
+    color: #acb0b5;
+    font-size: 14px;
+    font-weight: lighter;
+  }
 
   .bio-section-content .profile-avatar img {
     height: 270px;
@@ -355,6 +513,7 @@ hr {
     border-radius: 50%;
     object-fit: cover;
     position: relative;
+    /* top: 0; */
     z-index: 7;
   }
   .profile-details-container {
@@ -403,17 +562,32 @@ hr {
     width: 15px;
     margin-right: 5px;
   }
-  .edit-profile-btn {
-    display: none;
+  .edit-profile-btn button {
+    background: #fafbfc;
+    color: #000;
+    width: 80%;
+    padding: 6px;
+    border-radius: 5px;
+    text-align: center;
+    border: 0.5px solid #e1e4e8;
   }
   .profile-followers-list {
     display: flex;
     justify-content: space-between;
     padding: 10px 0 0 0;
     width: 60%;
+    font-size: 14px;
+    color: #586069;
   }
-  /* end of bio section */
 
+  .location li {
+    margin: 10px 0;
+    font-size: 14px;
+    color: #586069;
+  }
+  /* end of bio section css */
+
+  /* tabs & repo section  css   */
   .tabs {
     position: fixed;
     width: 100%;
@@ -432,8 +606,8 @@ hr {
 
   .tabs .tabs-list {
     display: flex;
-    width: 35%;
-    margin: 0 0 0 430px;
+    width: 50%;
+    margin: 0 0 0 400px;
     justify-content: space-between;
     padding: 10px 10px 0px 10px;
     z-index: 5;
@@ -456,11 +630,29 @@ hr {
   .tabs-content-item {
     display: none;
   }
+  #total-repo {
+    color: #484d51;
+    background: #e8eaec;
+    border-radius: 40px;
+    border: none;
+    padding: 2px 5px;
+  }
   #repositories {
     /* border:1px solid red; */
     z-index: 2;
     background: #fff;
     padding: 100px 70px 100px 0;
+  }
+  #overview,
+  #projects,
+  #packages {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+    padding: 100px 70px 100px 0;
+    z-index: 2;
+    background: #fff;
   }
   .repositories-filter-container {
     display: flex;
@@ -485,7 +677,7 @@ hr {
   }
   .repository-filter-search {
     order: 1;
-    width: 815px;
+    width: 800px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -493,7 +685,7 @@ hr {
   .repository-filter-search input[type="text"] {
     padding: 7px;
     border: 0.5px solid #e1e4e8;
-    width: 560px;
+    width: 550px;
     border-radius: 5px;
     font-size: 14px;
   }
@@ -527,15 +719,16 @@ hr {
     border-bottom: 0.5px solid #e1e4e8;
   }
   .repository-card-content h4 {
-    font-size: 25px;
+    font-size: 20px;
     padding: 7px 0;
     font-weight: bold;
     font-style: normal;
-    color: blue;
+    color: #0366d6;
   }
   .repository-card-content p {
-    font-size: 16px;
+    font-size: 14px;
     padding: 0 0 7px 0;
+    color: #586069;
   }
   .repository-card-content ul {
     display: flex;
@@ -543,8 +736,9 @@ hr {
     width: 100%;
   }
   .repository-card-content ul li {
-    font-size: 13px;
+    font-size: 12px;
     padding: 10px 0;
+    color: #586069;
   }
   .repository-card-content ul li:first-child {
     margin-right: 15px;
@@ -560,110 +754,7 @@ hr {
   }
   .repository-card aside button span {
     padding: 0 0 0 5px;
+    color: #586069;
   }
+  /* end of tabs & repo section  css    */
 }
-
-/* .desktop-navbar {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    padding: 10px 20px;
-    background: #24292F;
-    color:#fff;
-}
-.navbar-left-side ul {
-    display:flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.navbar-right-side ul  {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-}
-.search-bar {
-    border:1px solid #444D56;
-    border-radius:5px;
-    padding:5px 20px;
-    width:250px;
-}
-.search-bar:focus {
-    background:#fff !important;
-}
-input[type= text]:focus {
-    background:yellow;
-}
-.search-bar input[type = text] {
-    background:inherit;
-    border:none;
-    color:#fff;
-    outline:none;
-    box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
-}
-.mobile-navbar {
-    display:none;
-}
-.mobile-nav-btn {
-    display:none;
-    background:inherit;
-}
-.mobile-nav-btn  button{
-    padding:7px;
-    border:none;
-    background:inherit;
-    color:#fff;
-    font-size:20px;
-    display:flex;
-    flex-direction:column;
-    justify-content:space-between;
-}
-.mobile-nav-btn button>span {
-    border:1.5px solid #fff;
-    width:25px;
-    background:#fff;
-    margin:3px 0;
-}
-
-.tabs {
-    background:#fff;
-    padding: 50px 0 20px 350px;
-}
-.tabs ul {
-    display: flex;
-    width: 50%;
-    justify-content: space-between;
-}
-
-
-
-
-
-@media only screen 
-  and (min-device-width: 280px) 
-  and (max-device-width: 768px) 
-  and (-webkit-min-device-pixel-ratio: 1) {
-    .desktop-navbar {
-        grid-template-columns: repeat(3, 1fr);
-        width:100%;
-        justify-content:center;
-        align-items:center;
-    }
-    .navbar-left-side ul>li:nth-child(2),
-    .navbar-left-side ul>li:nth-child(n+3) {
-        display:none;
-    }
-    .navbar-right-side ul>li:nth-child(2),
-    .navbar-right-side ul>li:nth-child(n+3) {
-        display:none;
-    }
-    .navbar-left-side ul {
-        justify-content:center;
-    }
-    .navbar-right-side ul>li:nth-child(1) {
-        color:#fff;
-    }
-
-    .mobile-nav-btn {
-        display:block;
-    }
-  } */
